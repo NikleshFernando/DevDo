@@ -1,5 +1,6 @@
 package com.niklesh.api.controllers;
 
+import com.niklesh.api.dto.UserDTO;
 import com.niklesh.api.entities.User;
 import com.niklesh.api.repositories.UserRepository;
 import com.niklesh.api.services.UserService;
@@ -14,7 +15,7 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/create")
-    public User createUser(@RequestBody User user){
+    public User createUser(@RequestBody UserDTO user){
 
        return userService.createUser(user);
     }
